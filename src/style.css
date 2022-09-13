@@ -1,0 +1,382 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Courier New", Courier, monospace;
+}
+
+body {
+  background-color: #f0f0f0;
+}
+
+.header {
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.logo-container {
+  margin: 10px 0;
+  display: flex;
+  justify-content: left;
+  padding: 0 10px;
+  border: 2px solid #e0e0e0;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+}
+
+.header__title {
+  font-size: 3em;
+  font-weight: bold;
+  margin: 0 0 0 0;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: right;
+  padding: 10px 40px;
+  margin: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: darkgoldenrod;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.menu__item {
+  margin: 10px;
+  padding: 0 20px;
+}
+
+main section.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 180px auto;
+  column-gap: 10px;
+  row-gap: 30px;
+}
+
+main section.container .card1 {
+  height: 400px;
+  width: 250px;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+main section.container .card1 img {
+  width: 100%;
+  height: 60%;
+}
+
+main section.container .card1 .listepisods {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  padding: 10px;
+  width: 100%;
+}
+
+main section.container .card1 .listepisods h2 {
+  font-size: 20px;
+  color: black;
+}
+
+main section.container .card1 .listepisods div button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+  gap: 10px;
+  background: none;
+  border: none;
+  color: black;
+}
+
+section.popup .comment-modal .close-comment-bn i {
+  font-size: 20px;
+  color: black;
+}
+
+main section.container .card1 .listepisods div button i {
+  font-size: 20px;
+}
+
+main section.container .card1 .listepisods div button i:hover,
+main section.container .card1 .listepisods div button i:focus {
+  color: black;
+}
+
+main section.container .card1 .listepisods div button span {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+main section.container .card1 .card1-summ {
+  padding: 0 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section.popup .comment-modal .card-details p {
+  color: black;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 25px;
+  padding: 0 20px;
+}
+
+main section.container .card1 .card1-summ p {
+  color: black;
+  font-weight: 100;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+main section.container .card1 .comment-btn {
+  position: absolute;
+  bottom: 10px;
+  width: auto;
+  padding: 8px 20px;
+  font-size: 15px;
+  background: rgba(171, 218, 171, 0.548);
+  color: darkgoldenrod;
+  border: 1px solid black;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.6s;
+  margin-top: 30px;
+}
+
+main section.container .card1 .comment-btn:hover {
+  background: darkgoldenrod;
+  color: #fff;
+}
+
+/* COMMENT POPUP */
+
+section.popup {
+  display: none;
+  position: fixed;
+  background-color: white;
+  background-position: top center;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(20px);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+section.popup .comment-modal {
+  position: absolute;
+  transform: translate(-50%, -50%) scale(1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: white;
+  border: 2px solid black;
+  width: 90%;
+  height: 95vh;
+  padding: 24px;
+  top: 50%;
+  left: 50%;
+}
+
+section.popup .comment-modal .close-comment-bn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 25px;
+  background-color: darkgoldenrod;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+section.popup .comment-modal .card-details {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+section.popup .comment-modal .card-details img {
+  width: 100%;
+  height: 500px;
+}
+
+section.popup .comment-modal .card-details h3 {
+  color: black;
+  width: 100%;
+  text-align: center;
+  font-size: 22px;
+  line-height: 25px;
+}
+
+section.popup .comment-modal .card-details .more-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  width: 250px;
+  text-align: center;
+  padding: 20px;
+}
+
+section.popup .comment-modal .card-details .more-info li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  font-size: 15px;
+}
+
+section.popup .comment-modal .card-details .more-info li span {
+  width: 100%;
+  color: black;
+}
+
+section.popup .comment-modal .card-details .more-info li span strong {
+  color: darkgoldenrod;
+}
+
+section.popup .comment-modal .card-details .card-comment {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+section.popup .comment-modal .card-details .card-comment h3 {
+  font-size: 16px;
+}
+
+section.popup .comment-modal .card-details .card-comment .comment-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+  gap: 20px;
+}
+
+.comment-modal .card-details .card-comment .comment-area .comment-list {
+  box-shadow: 3px 2px 10px #fff;
+  width: 100%;
+  text-align: center;
+}
+
+.comment-modal .card-details .card-comment .comment-area .comment-list p {
+  font-size: 14px;
+  letter-spacing: 2px;
+  padding: 10px;
+  background-color: whitesmoke;
+}
+
+.comment-modal .card-details .card-comment .comment-area .comment-list p:nth-child(even) {
+  background-color: black;
+}
+
+.comment-modal .card-details .card-comment .comment-area form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 300px;
+}
+
+.comment-modal .card-details .card-comment .comment-area form input,
+.comment-modal .card-details .card-comment .comment-area form textarea {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 14px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: white;
+  color: darkgoldenrod;
+}
+
+.card-comment .comment-area form input::placeholder,
+.card-comment .comment-area form textarea::placeholder {
+  color: darkgoldenrod;
+}
+
+.comment-modal .card-details .card-comment .comment-area form button {
+  width: 100%;
+  padding: 8px 20px;
+  font-size: 15px;
+  background: darkgoldenrod;
+  color: black;
+  border: 1px solid black;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.6s;
+}
+
+.comment-modal .card-details .card-comment .comment-area form button:hover {
+  background: black;
+  color: darkgoldenrod;
+}
+
+.footer {
+  background-color: #fff;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 768px) {
+  .menu-container {
+    display: none;
+  }
+
+  .logo-container {
+    display: inline-block;
+  }
+}
