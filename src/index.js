@@ -1,13 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './mainapp';
-import report from './report';
+import Mainapp from './mainapp';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Mainapp />
   </React.StrictMode>,
   document.getElementById('main'),
 );
-
-report();

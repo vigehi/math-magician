@@ -1,14 +1,13 @@
-import logo from './logo.svg';
-import './index.css';
+/* eslint-disable react/prefer-stateless-function */
+import React from 'react';
+import Calc from './components/calc';
 
-function App() {
-  return (
-    <div className="MainApp">
-      <header className="header">
-        <img src={logo} className="logo" alt="logo" />
-      </header>
-    </div>
-  );
+class Mainapp extends React.Component {
+  render() {
+    return (
+      <Calc />
+    );
+  }
 }
 
-export default App;
+export default Mainapp;
