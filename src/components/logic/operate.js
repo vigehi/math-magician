@@ -13,18 +13,10 @@ export default function operate(first, second, val) {
     return val1.times(val2).toString();
   }
   if (val === '÷') {
-    try {
-      return val1.div(val2).toString();
-    } catch (err) {
-      return "Not allowed";
-    }
+    return val1.div(val2).toString();
   }
   if (val === '%') {
-    try {
-      return val1.mod(val2).toString();
-    } catch (err) {
-      return "not allowed";
-    }
+    return val1.mod(val2).toString();
   }
-  throw Error(`not allowed '${val}'`);
+  return { val };
 }
