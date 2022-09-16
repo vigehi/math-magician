@@ -2,10 +2,9 @@ div {
   background: url(../src/components/logic/design-quotes-minimalism.png);
   line-height: 60px;
   border-radius: 40px;
- 
 }
 
-div h1{
+div h1 {
   text-align: center;
   font-weight: bolder;
 }
@@ -16,7 +15,6 @@ div p {
   border-right: 10px pink solid;
   border-radius: 20px;
   font-family: 'Courier New', Courier, monospace;
-
 }
 
 div h4 {
