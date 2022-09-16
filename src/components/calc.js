@@ -2,6 +2,7 @@
 import React from 'react';
 import './calc.css';
 import calculate from './logic/calculate';
+import Header from '../header';
 
 class Calc extends React.Component {
   constructor(props) {
@@ -22,6 +23,7 @@ class Calc extends React.Component {
     const { sum, next, val } = this.state;
     return (
       <div className="bordeer">
+        <Header />
         <div className="maingrid">
           <button type="button" className="btn1">{ next || val || sum || 0}</button>
           <button type="button" className="btn2" onClick={() => this.handelClick(object1, 'AC')}>AC</button>
