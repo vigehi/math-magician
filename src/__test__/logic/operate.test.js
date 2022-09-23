@@ -2,8 +2,8 @@ import operate from '../../components/logic/operate';
 
 it('Testing operate.js', () => {
   // Arrange
-  const n1 = 9;
-  const n2 = 3;
+  const n1 = 20;
+  const n2 = 4;
 
   // Act
   const sum = operate(n1, n2, '+');
@@ -13,9 +13,9 @@ it('Testing operate.js', () => {
   const rem = operate(n1, n2, '%');
 
   // Assert
-  expect(+sum).toBe(12);
-  expect(+minus).toBe(6);
-  expect(+product).toBe(27);
-  expect(+divide).toBe(3);
+  expect(+sum).toBe(24);
+  expect(+minus).toBe(16);
+  expect(+product).toBe(80);
+  expect(+divide).toBe(5);
   expect(+rem).toBe(0);
 });
